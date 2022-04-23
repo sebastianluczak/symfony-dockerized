@@ -51,3 +51,8 @@ sf: ## List all Symfony commands or pass the parameter "c=" to run a given comma
 
 cc: c=c:c ## Clear the cache
 cc: sf
+
+## —— PHP # ———————————————————————————————————————————————————————————————
+cs-fix: ## Runs PHP-CS-Fixer against ./src
+	@$(eval c=tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src)
+	@$(PHP_CONT) $(c)
