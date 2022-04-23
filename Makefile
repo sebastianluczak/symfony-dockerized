@@ -53,6 +53,10 @@ cc: c=c:c ## Clear the cache
 cc: sf
 
 ## —— PHP 💻 ———————————————————————————————————————————————————————————————
+phpunit: ## Fires PHP Unit tests
+	@$(eval c=bin/phpunit)
+	@$(PHP_CONT) $(c)
+
 cs-fix: ## Runs PHP-CS-Fixer against ./src
 	@$(eval c=tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src)
 	@$(PHP_CONT) $(c)
