@@ -52,7 +52,52 @@ sf: ## List all Symfony commands or pass the parameter "c=" to run a given comma
 cc: c=c:c ## Clear the cache
 cc: sf
 
-## —— PHP # ———————————————————————————————————————————————————————————————
+## —— PHP 💻 ———————————————————————————————————————————————————————————————
 cs-fix: ## Runs PHP-CS-Fixer against ./src
 	@$(eval c=tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src)
 	@$(PHP_CONT) $(c)
+
+## —— Goodies and Extras 💾 —————————————————————————————————————————————————————
+scraper: ## Goutte is a screen scraping and web crawling library for PHP.
+	@$(eval c=req fabpot/goutte)
+	@$(COMPOSER) $(c)
+
+apiplatform: ## API Platform is a powerful yet easy to use full stack framework dedicated to API-driven projects
+	@$(eval c=req api)
+	@$(COMPOSER) $(c)
+
+booboo: ## A modern error handler capable of logging and formatting errors
+	@$(eval c=req league/booboo)
+	@$(COMPOSER) $(c)
+
+commonmark: ## Markdown parser for PHP based on the CommonMark spec
+	@$(eval c=req league/commonmark)
+	@$(COMPOSER) $(c)
+
+event: ## Event package for your app and domain
+	@$(eval c=req league/event)
+	@$(COMPOSER) $(c)
+
+muffin: ## Enables the rapid creation of objects for testing
+	@$(eval c=req league/factory-muffin)
+	@$(COMPOSER) $(c)
+
+flysystem: ## Abstraction for local and remote filesystems
+	@$(eval c=req league/flysystem:^3.0)
+	@$(COMPOSER) $(c)
+
+omnipay: ## Multi-gateway payment processing library
+	@$(eval c=require league/omnipay:^3)
+	@$(COMPOSER) $(c)
+
+period: ## Period is PHP's Time Range class
+	@$(eval c=req league/period)
+	@$(COMPOSER) $(c)
+
+calendar: ## Period is PHP's Time Range class
+	@$(eval c=require tattali/calendar-bundle)
+	@$(COMPOSER) $(c)
+
+csv: ## The library to deal with CSV data using modern code
+	@$(eval c=require league/csv)
+	@$(COMPOSER) $(c)
